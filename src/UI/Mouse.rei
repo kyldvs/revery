@@ -33,3 +33,18 @@ let releaseCapture: unit => unit;
 let onCursorChanged: Event.t(MouseCursors.t);
 
 let dispatch: (Cursor.t, Events.internalMouseEvents, Node.node) => unit;
+
+let registerListeners:
+  (
+    ~onMouseDown: mouseButtonHandler=?,
+    ~onMouseMove: mouseMoveHandler=?,
+    ~onMouseUp: mouseButtonHandler=?,
+    ~onMouseWheel: mouseWheelHandler=?,
+    ~onMouseEnter: mouseMoveHandler=?,
+    ~onMouseLeave: mouseMoveHandler=?,
+    ~onMouseOver: mouseMoveHandler=?,
+    ~onMouseOut: mouseMoveHandler=?,
+    unit,
+    unit
+  ) =>
+  unit;
